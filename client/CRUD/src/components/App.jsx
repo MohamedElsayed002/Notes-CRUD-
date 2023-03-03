@@ -12,14 +12,14 @@ const {updateForm} = useContext(Context)
 
   return (
     <div className="App">
-      <Notes/>
-
-      {
-        updateForm._id && <UpdateNotes/>
-      }
       {
         !updateForm._id && <CreateNotes/>
       }
+          {
+        updateForm._id && <UpdateNotes/>
+      }
+            <Notes/>
+
     </div>
   )
 }

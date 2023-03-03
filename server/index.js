@@ -36,7 +36,7 @@ app.put('/notes/:id' , async (req,res) => {
 })
 
 app.post('/notes' , async (req,res) => {
-    const {title,body} = req.body
+    const {title,body,price} = req.body
     let note = await NoteModel.create({title,body})
     res.json({note : note})
 })

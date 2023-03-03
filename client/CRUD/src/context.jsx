@@ -16,7 +16,7 @@ function ContextProvider ({children}) {
     const [updateForm,setUpdateForm] = useState({
       _id : null,
       title : "",
-      body : ""
+      body : "",
     })
 
     const fetchNotes = async () => {
@@ -55,6 +55,7 @@ function ContextProvider ({children}) {
       const toggleUpdate = (note) => {
         setUpdateForm({title : note.title, body : note.body , _id : note._id})
       }
+
     
       // Update Note
       const handleUpdateFieldChange = async  (e) => {
