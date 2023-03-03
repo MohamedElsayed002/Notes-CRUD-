@@ -1,8 +1,14 @@
 
+import {useContext} from 'react'
+import {Context} from '../Context'
 
 const Notes = () => {
+
+  const {data,deleteNote,toggleUpdate} = useContext(Context)
+
+  return (
     <div>
-       <h2>Notes :</h2>
+      <h2>Notes :</h2>
       {
         data && data.map(note => {
           return (
@@ -13,9 +19,10 @@ const Notes = () => {
               <button onClick={() => toggleUpdate(note)}>Update</button>
             </div>
           )
-        })
-      }
+       })
+     }
   </div>
+  )
 }
 
 export default Notes
